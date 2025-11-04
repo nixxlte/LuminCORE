@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<registry>
+	<Hkey_ROOT>
+		<Lumin>
+			<LuminSDK>
+				<REG_QWORD Name="InstalledVersion" Value="0.40.4" />
+				<REG_DWORD Name="TargetBuild" Value="2093" />
+				<REG_DWORD Name="CanIhaveOverlay" Value="1" />
+			</LuminSDK>
+			<CommunitySDK>
+				<REG_SZ Name="Channel" Value="Trunk" />
+				<REG_DWORD Name="InstalledVersion" Value="1" />
+				<REG_DWORD Name="CanIuseSharpSDK" />
+			</CommunitySDK>
+			<Conteiner>
+				<REG_SZ Name="RunLocation" Value="/mnt/LuminConteiner" />
+				<REG_DWORD Name="IsInstalled" Value="1" />
+			</Conteiner>
+		</Lumin>
+		<PhantomUI>
+			<REG_DWORD Name="IsRunning" Value="0" />
+		</PhantomUI>
+	</Hkey_ROOT>
+</registry>

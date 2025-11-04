@@ -27,6 +27,12 @@
 *.lib
 
 # Executables
-*.exe
 *.out
 *.app
+
+# Other stuff
+*.idb
+*.pdb
+*.class
+/.vs/
+*.iso
