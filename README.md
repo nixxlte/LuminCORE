@@ -1,8 +1,10 @@
-# LuminOS
+<img width="100" height="100" alt="BRANDING" src="https://github.com/user-attachments/assets/73287fde-79a5-448e-a42c-9c34bb363e0b" /><br>
+# LuminOS 
 an operating system based on Linux, optimized for C# and focused on privacy and design.  
 LuminOS is still in early development, so expect bugs and missing features.
 
 ## Details
+
 - Based on Ubuntu/Debian Linux
 - Uses C# as main programming language, and Avalonia for the UI
 - Focus on privacy and design.
