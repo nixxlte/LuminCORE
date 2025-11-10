@@ -28,6 +28,27 @@ namespace Overlay {
         // Make registries accessible to methods across the class
         static Dictionary<string, Registry> registries = new Dictionary<string, Registry>();
 
+        public static void ASCII(string draw) {
+            if (draw == "OSlogo"){
+                Console.WriteLine("{]"); // Complete draw will be added later, and this is the test to verify if the SDK is working
+            }
+        }
+
+        public static void checkREG(string path, bool exist, bool isDEBUG){ // Im trying to use MacOS at this point, and the version im using have a completely buggy .Net
+            exist = false;                                                  // That means the code will have less tests, and ill depend the community even more while this challange.
+            if (registries.ContainsKey(path)) {                             // If you can, help me testing this code, i grant it will be helpful. thanks :3
+                exist = true;
+                if (isDEBUG) {
+                    Console.WriteLine("Requested registry key exists.");
+                }
+            } else {
+                exist = false;
+                if (isDEBUG) {
+                    console.WriteLine("Requested registry key doesn't exists.");
+                }
+            }
+        }
+
         public static void Main(string[] args) {
             Console.WriteLine("Hello, World!\n");
             StartOverlay();
@@ -111,7 +132,7 @@ namespace Overlay {
                     if (registries.ContainsKey(path)) {
                         Console.WriteLine($"Built for LuminOS build {registries[path].Value}\n");
                     }
-                    Console.WriteLine("for testing purposes only | last code edit 20251103\n");
+                    Console.WriteLine("for testing purposes only | last code edit 20251108\n");
                     break;
             }
         }
