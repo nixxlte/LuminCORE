@@ -28,9 +28,32 @@ namespace Overlay {
         // Make registries accessible to methods across the class
         static Dictionary<string, Registry> registries = new Dictionary<string, Registry>();
 
+        public static string blink_ = " ";
+        public static bool is_blinking = false;
+
+        public static void underscore(bool isBlinking, int times) {
+            static int blinked;
+            if (isBlinking) {
+                while (isBlinking) {
+                    if (blinked <= times) {
+                        blink_ = "_";
+                        await Task.Delay(500);
+                        blink_ = " ";
+                        await Task.Delay(500);
+                    } else {
+                        isBlinking = false;
+                    }
+                }
+            } else {
+                blink_ = " ";
+            }
+        }
+
         public static void ASCII(string draw) {
             if (draw == "OSlogo"){
-                Console.WriteLine("{]"); // Complete draw will be added later, and this is the test to verify if the SDK is working
+                Console.WriteLine("{ L U M I N ]");
+                is_blinking = true;
+                underscore(is_blinking, 10);
             }
         }
 
@@ -134,6 +157,8 @@ namespace Overlay {
                     }
                     Console.WriteLine("for testing purposes only | last code edit 20251108\n");
                     break;
+                case "ASCII":
+                    ASCII(args[0]);
             }
         }
 
