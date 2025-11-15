@@ -32,6 +32,8 @@
 
 # Other stuff
 *.idb
+.DS_store
+# (I started using a mac to code and im insanely happy >:3c)
 *.pdb
 *.class
 /.vs/
