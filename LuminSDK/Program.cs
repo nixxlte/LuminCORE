@@ -31,6 +31,8 @@ namespace Overlay {
         public static string blink_ = " ";
         public static bool is_blinking = false;
 
+        public static bool IsBeta = false;
+
         public static void underscore(bool isBlinking, int times) {
             static int blinked;
             if (isBlinking) {
@@ -75,6 +77,12 @@ namespace Overlay {
         public static void Main(string[] args) {
             Console.WriteLine("Hello, World!\n");
             StartOverlay();
+        }
+
+        public static void ThreadHold(bool running){
+            while (running) {
+                Console.WriteLine("SDK is running in stable channel");
+            }
         }
 
         public static void Bash() {
@@ -159,6 +167,18 @@ namespace Overlay {
                     break;
                 case "ASCII":
                     ASCII(args[0]);
+                    break;
+                case "ISversion":
+                    VerifyBeta();
+                    break;
+            }
+        }
+
+        public static void VerifyBeta() {
+            string path = "Lumin/conteiner/IsRunningBeta";
+            if (registries[path].Value == "1") {
+                IsBeta = true;
+                Console.Write("SDK is running in channel trunk.\n");
             }
         }
 
@@ -185,9 +205,14 @@ namespace Overlay {
             if (registries.ContainsKey(path)) {
                 Console.WriteLine($"Running version: {registries[path].Value}\n");
             }
-
-            while(true) {
-                Bash(); // For testing purposes only, will be removed later (this is not a shell, just a compatibility layer)
+            
+            VerifyBeta();
+            if (IsBeta) {
+                while(true) {
+                    Bash(); // For testing purposes only, will be removed later (this is not a shell, just a compatibility layer)
+                }
+            } else {
+                ThreadHold(true);
             }
         }
 

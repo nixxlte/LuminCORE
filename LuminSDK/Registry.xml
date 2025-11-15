@@ -15,6 +15,7 @@
 			<Conteiner>
 				<REG_SZ Name="RunLocation" Value="/mnt/LuminConteiner" />
 				<REG_DWORD Name="IsInstalled" Value="1" />
+				<REG_DWORD Name="IsUsingBeta" Value="1"
 			</Conteiner>
 		</Lumin>
 		<PhantomUI>
