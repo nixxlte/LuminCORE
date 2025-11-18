@@ -31,8 +31,15 @@ namespace Overlay {
         public static string blink_ = " ";
         public static bool is_blinking = false;
 
-        public static void underscore(bool isBlinking, int times) {
-            static int blinked;
+        public static string errorcode = "Cx0000"; // Default error code
+
+        public static void catchError(string reason, string code) {
+            errorcode = "Cx" + code;
+            Console.WriteLine("An error occurred: " + reason + " Error code: " + errorcode);
+        }
+
+        public static async void underscore(bool isBlinking, int times) {
+            int blinked = 0;
             if (isBlinking) {
                 while (isBlinking) {
                     if (blinked <= times) {
@@ -54,6 +61,8 @@ namespace Overlay {
                 Console.WriteLine("{ L U M I N ]");
                 is_blinking = true;
                 underscore(is_blinking, 10);
+            } else {
+                catchError("ASCII art not found", "0404");
             }
         }
 
@@ -67,7 +76,7 @@ namespace Overlay {
             } else {
                 exist = false;
                 if (isDEBUG) {
-                    console.WriteLine("Requested registry key doesn't exists.");
+                    Console.WriteLine("Requested registry key doesn't exists.");
                 }
             }
         }
@@ -129,7 +138,7 @@ namespace Overlay {
                     Console.Write(" - break: Exits the LuminSDK Shell\n");
                     Console.Write(" - regedit [path]: Reads a registry value from Registry.xml\n");
                     Console.Write(" - console.clear: Clears the console");
-                    Console.Write(" - luminver: Show info about SDK")
+                    Console.Write(" - luminver: Show info about SDK");
                     break;
                 case "regedit":
                     if (args.Length == 0) {
@@ -144,6 +153,9 @@ namespace Overlay {
                     break;
                 case "luminver":
                     Console.Clear();
+                    Console.WriteLine();
+                    ASCII("OSlogo");
+                    Console.WriteLine();
                     Console.WriteLine("LuminSDK, Beta 3");
                     Console.WriteLine("Code writen by Nyan Nix\n");
                     string path = "Lumin/LuminSDK/InstalledVersion";
@@ -155,10 +167,22 @@ namespace Overlay {
                     if (registries.ContainsKey(path)) {
                         Console.WriteLine($"Built for LuminOS build {registries[path].Value}\n");
                     }
-                    Console.WriteLine("for testing purposes only | last code edit 20251108\n");
+                    path = "Lumin/LuminSDK/Edition";
+                    if (registries.ContainsKey(path)) {
+                        Console.WriteLine($"for testing purposes only | code edition {registries[path].Value}\n");
+                    }
                     break;
-                case "ASCII":
-                    ASCII(args[0]);
+                case "ascii":
+                    if (args.Length == 0) {
+                        Console.WriteLine("Usage: ascii [draw]\n");
+                        break;
+                    } else {
+                        ASCII(args[0]);
+                        break;
+                    }
+                case "ass":
+                    Console.WriteLine("guei");
+                    break;
             }
         }
 

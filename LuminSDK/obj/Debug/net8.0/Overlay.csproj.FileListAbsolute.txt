@@ -26,3 +26,18 @@ C:\Users\NixxLTE UwU\Documents\LuminOS\LuminSDK\obj\Debug\net8.0\refint\Overlay.
 C:\Users\NixxLTE UwU\Documents\LuminOS\LuminSDK\obj\Debug\net8.0\Overlay.pdb
 C:\Users\NixxLTE UwU\Documents\LuminOS\LuminSDK\obj\Debug\net8.0\Overlay.genruntimeconfig.cache
 C:\Users\NixxLTE UwU\Documents\LuminOS\LuminSDK\obj\Debug\net8.0\ref\Overlay.dll
+A:\LuminOS\LuminSDK\obj\Debug\net8.0\Overlay.GeneratedMSBuildEditorConfig.editorconfig
+A:\LuminOS\LuminSDK\obj\Debug\net8.0\Overlay.AssemblyInfoInputs.cache
+A:\LuminOS\LuminSDK\obj\Debug\net8.0\Overlay.AssemblyInfo.cs
+A:\LuminOS\LuminSDK\obj\Debug\net8.0\Overlay.csproj.CoreCompileInputs.cache
+A:\LuminOS\LuminSDK\obj\Debug\net8.0\Overlay.sourcelink.json
+A:\LuminOS\LuminSDK\obj\Debug\net8.0\Overlay.dll
+A:\LuminOS\LuminSDK\obj\Debug\net8.0\refint\Overlay.dll
+A:\LuminOS\LuminSDK\obj\Debug\net8.0\Overlay.pdb
+A:\LuminOS\LuminSDK\bin\Debug\net8.0\Overlay.exe
+A:\LuminOS\LuminSDK\bin\Debug\net8.0\Overlay.deps.json
+A:\LuminOS\LuminSDK\bin\Debug\net8.0\Overlay.runtimeconfig.json
+A:\LuminOS\LuminSDK\bin\Debug\net8.0\Overlay.dll
+A:\LuminOS\LuminSDK\bin\Debug\net8.0\Overlay.pdb
+A:\LuminOS\LuminSDK\obj\Debug\net8.0\Overlay.genruntimeconfig.cache
+A:\LuminOS\LuminSDK\obj\Debug\net8.0\ref\Overlay.dll
