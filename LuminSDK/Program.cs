@@ -167,12 +167,9 @@ namespace Overlay {
                     if (registries.ContainsKey(path)) {
                         Console.WriteLine($"Built for LuminOS build {registries[path].Value}\n");
                     }
-                    path = "Lumin/LuminSDK/Edition";
-                    if (registries.ContainsKey(path)) {
-                        Console.WriteLine($"for testing purposes only | code edition {registries[path].Value}\n");
-                    }
-                    break;
-                case "ascii":
+                    Console.WriteLine("for testing purposes only | code edition 20251119\n"); // im not using the REG key here cause it bugs the code completely
+                    break;                                                                    // also "20251119" is the date of last edit (19th November 2025)
+                case "ascii":                                                                 // and the date is used as the code version
                     if (args.Length == 0) {
                         Console.WriteLine("Usage: ascii [draw]\n");
                         break;
