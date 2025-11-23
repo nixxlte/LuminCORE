@@ -66,9 +66,9 @@ namespace Overlay {
             }
         }
 
-        public static void checkREG(string path, bool exist, bool isDEBUG){ // Im trying to use MacOS at this point, and the version im using have a completely buggy .Net
-            exist = false;                                                  // That means the code will have less tests, and ill depend the community even more while this challange.
-            if (registries.ContainsKey(path)) {                             // If you can, help me testing this code, i grant it will be helpful. thanks :3
+        public static void checkREG(string path, bool exist, bool isDEBUG){
+            exist = false;                                               
+            if (registries.ContainsKey(path)) {                     
                 exist = true;
                 if (isDEBUG) {
                     Console.WriteLine("Requested registry key exists.");
@@ -148,6 +148,18 @@ namespace Overlay {
                         regedit(args[0]);
                     }
                     break;
+                case "checkreg":
+                    if (args.Length == 0) {
+                        Console.WriteLine("Usage: checkreg [path]\n");
+                    } else {
+                        bool exist = false;
+                        bool isDEBUG = false;
+                        if (args.Length > 1 && args[1].ToLower() == "debug") {
+                            isDEBUG = true;
+                        }
+                        checkREG(args[0], exist, isDEBUG);
+                    }
+                    break;
                 case "console.clear":
                     Console.Clear();
                     break;
@@ -167,8 +179,8 @@ namespace Overlay {
                     if (registries.ContainsKey(path)) {
                         Console.WriteLine($"Built for LuminOS build {registries[path].Value}\n");
                     }
-                    Console.WriteLine("for testing purposes only | code edition 20251119\n"); // im not using the REG key here cause it bugs the code completely
-                    break;                                                                    // also "20251119" is the date of last edit (19th November 2025)
+                    Console.WriteLine("for testing purposes only | code edition 20251123\n"); // im not using the REG key here cause it bugs the code completely
+                    break;                                                                    // also "20251123" is the date of last edit (19th November 2025)
                 case "ascii":                                                                 // and the date is used as the code version
                     if (args.Length == 0) {
                         Console.WriteLine("Usage: ascii [draw]\n");
@@ -177,8 +189,24 @@ namespace Overlay {
                         ASCII(args[0]);
                         break;
                     }
-                case "ass":
-                    Console.WriteLine("guei");
+                case "osver":
+                    Console.Clear();
+                    Console.WriteLine();
+                    ASCII("OSlogo");
+                    Console.WriteLine();
+                    Console.WriteLine("LuminOS, Beta 1");
+                    Console.WriteLine("Code writen by Nyan Nix\n");
+                    path = "Lumin/LuminSDK/TargetBuild";
+                    if (registries.ContainsKey(path))
+                    {
+                        Console.WriteLine($"LuminOS build {registries[path].Value}\n");
+                    }
+                    path = "Lumin/LuminSDK/InstalledVersion";
+                    if (registries.ContainsKey(path))
+                    {
+                        Console.WriteLine($"Running under LuminSDK build {registries[path].Value}");
+                    }
+                    Console.WriteLine("for testing purposes only | code edition 20251123\n");
                     break;
             }
         }
