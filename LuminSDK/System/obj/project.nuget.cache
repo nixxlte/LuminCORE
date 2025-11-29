@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "2JvdsbB0f6M=",
+  "success": true,
+  "projectFilePath": "A:\\LuminOS\\LuminSDK\\Overlay.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\PhoenixUwU\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\8.0.22\\microsoft.netcore.app.host.linux-x64.8.0.22.nupkg.sha512"
+  ],
+  "logs": []
+}

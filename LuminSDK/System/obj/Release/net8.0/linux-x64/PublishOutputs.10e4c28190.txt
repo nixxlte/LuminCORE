@@ -1,0 +1,5 @@
+A:\LuminOS\LuminSDK\bin\Release\net8.0\linux-x64\publish\Overlay
+A:\LuminOS\LuminSDK\bin\Release\net8.0\linux-x64\publish\Overlay.dll
+A:\LuminOS\LuminSDK\bin\Release\net8.0\linux-x64\publish\Overlay.deps.json
+A:\LuminOS\LuminSDK\bin\Release\net8.0\linux-x64\publish\Overlay.runtimeconfig.json
+A:\LuminOS\LuminSDK\bin\Release\net8.0\linux-x64\publish\Overlay.pdb

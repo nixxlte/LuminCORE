@@ -1,0 +1,15 @@
+A:\LuminOS\LuminSDK\bin\Release\net8.0\linux-x64\Overlay
+A:\LuminOS\LuminSDK\bin\Release\net8.0\linux-x64\Overlay.deps.json
+A:\LuminOS\LuminSDK\bin\Release\net8.0\linux-x64\Overlay.runtimeconfig.json
+A:\LuminOS\LuminSDK\bin\Release\net8.0\linux-x64\Overlay.dll
+A:\LuminOS\LuminSDK\bin\Release\net8.0\linux-x64\Overlay.pdb
+A:\LuminOS\LuminSDK\obj\Release\net8.0\linux-x64\Overlay.GeneratedMSBuildEditorConfig.editorconfig
+A:\LuminOS\LuminSDK\obj\Release\net8.0\linux-x64\Overlay.AssemblyInfoInputs.cache
+A:\LuminOS\LuminSDK\obj\Release\net8.0\linux-x64\Overlay.AssemblyInfo.cs
+A:\LuminOS\LuminSDK\obj\Release\net8.0\linux-x64\Overlay.csproj.CoreCompileInputs.cache
+A:\LuminOS\LuminSDK\obj\Release\net8.0\linux-x64\Overlay.sourcelink.json
+A:\LuminOS\LuminSDK\obj\Release\net8.0\linux-x64\Overlay.dll
+A:\LuminOS\LuminSDK\obj\Release\net8.0\linux-x64\refint\Overlay.dll
+A:\LuminOS\LuminSDK\obj\Release\net8.0\linux-x64\Overlay.pdb
+A:\LuminOS\LuminSDK\obj\Release\net8.0\linux-x64\Overlay.genruntimeconfig.cache
+A:\LuminOS\LuminSDK\obj\Release\net8.0\linux-x64\ref\Overlay.dll
