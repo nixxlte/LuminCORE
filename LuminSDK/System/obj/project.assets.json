@@ -1,8 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {},
-    "net8.0/linux-x64": {}
+    "net8.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
@@ -15,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "A:\\LuminOS\\LuminSDK\\Overlay.csproj",
+      "projectUniqueName": "A:\\LuminOS\\LuminSDK\\System\\Overlay.csproj",
       "projectName": "Overlay",
-      "projectPath": "A:\\LuminOS\\LuminSDK\\Overlay.csproj",
+      "projectPath": "A:\\LuminOS\\LuminSDK\\System\\Overlay.csproj",
       "packagesPath": "C:\\Users\\PhoenixUwU\\.nuget\\packages\\",
-      "outputPath": "A:\\LuminOS\\LuminSDK\\obj\\",
+      "outputPath": "A:\\LuminOS\\LuminSDK\\System\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,23 +68,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.linux-x64",
-            "version": "[8.0.22, 8.0.22]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
-      }
-    },
-    "runtimes": {
-      "linux-x64": {
-        "#import": []
       }
     }
   }

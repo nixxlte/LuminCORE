@@ -33,6 +33,9 @@ namespace Overlay {
 
         public static string errorcode = "Cx0000"; // Default error code
 
+        public static string SDKedition = "Lumin.Overlay.SDK.System"; // System package name
+        public static int exceptionNumber = 0;
+
         public static void catchError(string reason, string code) {
             errorcode = "Cx" + code;
             Console.WriteLine("An error occurred: " + reason + " Error code: " + errorcode);
@@ -53,6 +56,26 @@ namespace Overlay {
                 }
             } else {
                 blink_ = " ";
+            }
+        }
+
+        public static void exception(string str) {
+            Console.Writeline("Exception on running program, " + str);
+            exceptionNumber = exceptionNumber + 1;
+            if (exceptionNumber >= 5) {
+                Console.Writeline("Exception numbers exceded the limit of 5, exiting");
+                Thread.Sleep(500);
+                Enviroment.Exit(0);
+            }
+        }
+
+        public static void end(int code) { 
+            if (code == 0) {
+                Console.Write(".");
+            } else if (code == 1) {
+                Console.Write("!!!");
+            } else {
+                exception("returned code is invalid!!!");
             }
         }
 
@@ -128,9 +151,23 @@ namespace Overlay {
                     if (surely.ToLower() == "y" || surely.ToLower() == "yes") {
                         Environment.Exit(0);
                         break;
-                    } else { 
+                    } else if (surely.ToLower() == "n" || surely.ToLower() == "no") { 
                         Console.WriteLine("Aborting end.");
                         break;
+                    } else {
+                        Console.Write("Please type 'y' or 'n' ");
+                        while (surely.ToLower != "y" || surely.ToLower != "n") {
+                            surely = Console.Readline() ?? string.Empty;
+                            if (surely.ToLower() == "y" || surely.ToLower() == "yes") {
+                                Environment.Exit(0);
+                                break;
+                            } else if (surely.ToLower() == "n" || surely.ToLower() == "no") {
+                                Console.WriteLine("Aborting end.");
+                                break;
+                            } else {
+                                Console.Write("Please type 'y' or 'n' ");
+                            }
+                        }
                     }
                 case "help":
                     Console.WriteLine("Available commands:");
@@ -208,6 +245,13 @@ namespace Overlay {
                     }
                     Console.WriteLine("for testing purposes only | code edition 20251123\n");
                     break;
+                case "exception":
+                    if (args.Length == 0) {
+                        Console.WriteLine("Usage: exception [text]");
+                    } else {
+                        exception(args[0]);
+                        break;
+                    }
             }
         }
 
@@ -220,7 +264,7 @@ namespace Overlay {
                 return;
             }
 
-            XmlNode? root = doc.SelectSingleNode("/registry/Hkey_ROOT");
+            XmlNode root = doc.SelectSingleNode("/registry/Hkey_ROOT");
 
             // Use the static 'registries' field (clear any existing entries)
             registries.Clear();
@@ -235,8 +279,12 @@ namespace Overlay {
                 Console.WriteLine($"Running version: {registries[path].Value}\n");
             }
 
-            while(true) {
+            if (SDKedition == "Lumin.Overlay.SDK.System") { 
+                while(true) {
                 Bash(); // For testing purposes only, will be removed later (this is not a shell, just a compatibility layer)
+                }
+            } else { 
+            
             }
         }
 
@@ -244,8 +292,8 @@ namespace Overlay {
             foreach (XmlNode child in node.ChildNodes) {
                 if (child.Name.StartsWith("REG_")) {
                     string type = child.Name;
-                    string name = child.Attributes?["Name"]?.Value ?? string.Empty;
-                    string value = child.Attributes?["Value"]?.Value ?? string.Empty;
+                    string name = child.Attributes["Name"]?.Value ?? string.Empty;
+                    string value = child.Attributes["Value"]?.Value ?? string.Empty;
 
                     string EntirePath = string.IsNullOrEmpty(ActualPath) ? name : ActualPath + "/" + name;
 
