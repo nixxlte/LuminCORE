@@ -38,7 +38,7 @@
 *.class
 /.vs/
 *.iso
-/System/
+/System/Disassembled/
 desktop.ini
 .VolumeIcon.icns
 /Builds/

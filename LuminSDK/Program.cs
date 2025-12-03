@@ -165,7 +165,7 @@ namespace Overlay {
                                 Console.WriteLine("Aborting end.");
                                 break;
                             } else {
-                                Console.Write("Please type 'y' or 'n' ");
+                                Console.Write("Please type 'y' or 'n'   '");
                             }
                         }
                     }
@@ -216,8 +216,8 @@ namespace Overlay {
                     if (registries.ContainsKey(path)) {
                         Console.WriteLine($"Built for LuminOS build {registries[path].Value}\n");
                     }
-                    Console.WriteLine("for testing purposes only | code edition 20251123\n"); // im not using the REG key here cause it bugs the code completely
-                    break;                                                                    // also "20251123" is the date of last edit (19th November 2025)
+                    Console.WriteLine("for testing purposes only | code edition 20251203\n"); // im not using the REG key here cause it bugs the code completely
+                    break;                                                                    // also "20251203" is the date of last edit (19th November 2025)
                 case "ascii":                                                                 // and the date is used as the code version
                     if (args.Length == 0) {
                         Console.WriteLine("Usage: ascii [draw]\n");
@@ -243,7 +243,7 @@ namespace Overlay {
                     {
                         Console.WriteLine($"Running under LuminSDK build {registries[path].Value}");
                     }
-                    Console.WriteLine("for testing purposes only | code edition 20251123\n");
+                    Console.WriteLine("for testing purposes only | code edition 20251203\n");
                     break;
                 case "exception":
                     if (args.Length == 0) {
@@ -280,9 +280,7 @@ namespace Overlay {
             }
 
             if (SDKedition == "Lumin.Overlay.SDK.System") { 
-                while(true) {
-                Bash(); // For testing purposes only, will be removed later (this is not a shell, just a compatibility layer)
-                }
+                while(true) { Bash(); }  // For testing purposes only, will be removed later (this is not a shell, just a compatibility layer)
             } else { 
             
             }
