@@ -26,6 +26,13 @@ SDK.checkREG(*string* "registy path", *bool* you_guess_it_exists, *bool* is_in_d
 **in *bool* you_guess_it_exists, please use another boolean variable to return the command correctly**
 
 SDK.catchError(*string* "error message", *int* error_code);<br>
+**this shows the error on the screen, for debug**
+
+SDK.exception(*string* "exception message");<br>
+**this is the catchError, but for semi-fatal errors, more than 5 exceptions will cause a fatal error and the ending of the program**
+
+SDK.end();<br>
+**this is similar to return; but it doesnt return any value**
 
 **thats it for now :3**
 

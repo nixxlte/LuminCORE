@@ -18,7 +18,7 @@ echo "done."
 echo "installing KDE applications..."
 apt install kde-applications -y
 apt remove gnome-terminal -y
-apt install konsole gnome-sushi -y # i know, is contradictory, but gnome-sushi is a nice file previewer
+apt install konsole gnome-sushi -y # i know, is contradictory, but gnome-sushi is a nice file previewer and Ubuntu already needs nautilus to work properly
 echo "done."
 
 # Install some dependencies
@@ -27,6 +27,7 @@ apt install nala python3 python3-pip git wget neofetch -y
 snap install dotnet-sdk --classic
 snap install dotnet-runtime --classic
 snap install dotnet --classic
+dotnet new install Avalonia.Templates # Phantom GUI needs this, also almost every UI C# app on Lumin/Linux
 echo "done."
 
 # Check the instalation
