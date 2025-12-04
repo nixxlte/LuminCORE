@@ -18,7 +18,8 @@ LuminCommunitySDK is not avaible yet, cause it's based on LuminSDK, that still i
 #### Working functions
 LuminSDK and CommunitySDK have custom commands, and thats the current working commands:  
 by the way, to use the commands, you'll need to use SDK. as a prefix.<br>
-SDK.underscore(*bool* isBlinking, *int* how_many_times_will_underscore_blink);<br>
+
+SDK.underscore(*int* how_many_times_will_underscore_blink);<br>
 
 SDK.ASCII(*string* "what draw do you want");¹<br>
 
