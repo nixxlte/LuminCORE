@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Threading;
 
 // HII! That code is the first part of the LuminOS project, that was made to integrate C# with the Linux Kernel.
 // The focus of Lumin is create a Linux Distro based on C# and .NET technologies
@@ -33,34 +34,57 @@ namespace Overlay {
 
         public static string errorcode = "Cx0000"; // Default error code
 
+        public static string SDKedition = "Lumin.Overlay.SDK.System"; // System package name
+        public static int exceptionNumber = 0;
+
         public static void catchError(string reason, string code) {
             errorcode = "Cx" + code;
             Console.WriteLine("An error occurred: " + reason + " Error code: " + errorcode);
         }
 
-        public static async void underscore(bool isBlinking, int times) {
+        public static async Task underscore(int times) {
             int blinked = 0;
-            if (isBlinking) {
-                while (isBlinking) {
-                    if (blinked <= times) {
-                        blink_ = "_";
-                        await Task.Delay(500);
-                        blink_ = " ";
-                        await Task.Delay(500);
-                    } else {
-                        isBlinking = false;
-                    }
-                }
-            } else {
+            is_blinking = true;
+            while (is_blinking && blinked < times) {
+                blink_ = "_";
+                await Task.Delay(500);
                 blink_ = " ";
+                await Task.Delay(500);
+                blinked++;
+            }
+
+            // ensure blinking flag is reset when done
+            is_blinking = false;
+            blink_ = " ";
+        }
+
+        public static void exception(string str) {
+            Console.WriteLine("Exception on running program, " + str);
+            exceptionNumber = exceptionNumber + 1;
+            if (exceptionNumber >= 5) {
+                Console.WriteLine("Exception numbers exceeded the limit of 5, exiting");
+                Thread.Sleep(500);
+                Environment.Exit(0);
+            }
+        }
+
+        public static void end(int code) { 
+            if (code == 0) {
+                Console.Write(".");
+            } else if (code == 1) {
+                Console.Write("!!!");
+            } else {
+                exception("returned code is invalid!!!");
             }
         }
 
         public static void ASCII(string draw) {
-            if (draw == "OSlogo"){
+            if (string.Equals(draw, "OSlogo", StringComparison.OrdinalIgnoreCase)){
                 Console.WriteLine("{ L U M I N ]");
-                is_blinking = true;
-                underscore(is_blinking, 10);
+                // start blinking (fire-and-forget)
+                if (!is_blinking) {
+                    _ = underscore(10);
+                }
             } else {
                 catchError("ASCII art not found", "0404");
             }
@@ -128,8 +152,23 @@ namespace Overlay {
                     if (surely.ToLower() == "y" || surely.ToLower() == "yes") {
                         Environment.Exit(0);
                         break;
-                    } else { 
+                    } else if (surely.ToLower() == "n" || surely.ToLower() == "no") { 
                         Console.WriteLine("Aborting end.");
+                        break;
+                    } else {
+                        Console.Write("Please type 'y' or 'n' ");
+                        while (true) {
+                            surely = Console.ReadLine() ?? string.Empty;
+                            if (surely.ToLower() == "y" || surely.ToLower() == "yes") {
+                                Environment.Exit(0);
+                                break;
+                            } else if (surely.ToLower() == "n" || surely.ToLower() == "no") {
+                                Console.WriteLine("Aborting end.");
+                                break;
+                            } else {
+                                Console.Write("Please type 'y' or 'n': ");
+                            }
+                        }
                         break;
                     }
                 case "help":
@@ -137,8 +176,8 @@ namespace Overlay {
                     Console.Write(" - echo [text]: Prints the text to the console\n");
                     Console.Write(" - break: Exits the LuminSDK Shell\n");
                     Console.Write(" - regedit [path]: Reads a registry value from Registry.xml\n");
-                    Console.Write(" - console.clear: Clears the console");
-                    Console.Write(" - luminver: Show info about SDK");
+                    Console.Write(" - console.clear: Clears the console\n");
+                    Console.Write(" - luminver: Show info about SDK\n");
                     break;
                 case "regedit":
                     if (args.Length == 0) {
@@ -179,8 +218,8 @@ namespace Overlay {
                     if (registries.ContainsKey(path)) {
                         Console.WriteLine($"Built for LuminOS build {registries[path].Value}\n");
                     }
-                    Console.WriteLine("for testing purposes only | code edition 20251123\n"); // im not using the REG key here cause it bugs the code completely
-                    break;                                                                    // also "20251123" is the date of last edit (19th November 2025)
+                    Console.WriteLine("for testing purposes only | code edition 20251203\n"); // im not using the REG key here cause it bugs the code completely
+                    break;                                                                    // also "20251203" is the date of last edit (19th November 2025)
                 case "ascii":                                                                 // and the date is used as the code version
                     if (args.Length == 0) {
                         Console.WriteLine("Usage: ascii [draw]\n");
@@ -206,8 +245,16 @@ namespace Overlay {
                     {
                         Console.WriteLine($"Running under LuminSDK build {registries[path].Value}");
                     }
-                    Console.WriteLine("for testing purposes only | code edition 20251123\n");
+                    Console.WriteLine("for testing purposes only | code edition 20251203\n");
                     break;
+                case "exception":
+                    if (args.Length == 0) {
+                        Console.WriteLine("Usage: exception [text]");
+                        break;
+                    } else {
+                        exception(args[0]);
+                        break;
+                    }
             }
         }
 
@@ -235,8 +282,10 @@ namespace Overlay {
                 Console.WriteLine($"Running version: {registries[path].Value}\n");
             }
 
-            while(true) {
-                Bash(); // For testing purposes only, will be removed later (this is not a shell, just a compatibility layer)
+            if (SDKedition == "Lumin.Overlay.SDK.System") { 
+                while(true) { Bash(); }  // For testing purposes only, will be removed later (this is not a shell, just a compatibility layer)
+            } else { 
+            
             }
         }
 
