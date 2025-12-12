@@ -27,3 +27,17 @@ This will start LuminSDK, on a terminal emulator.<br>
 LuminSDK is made for SYSTEM APPS, any third party apps should use DotNet 8.0LTS (latest LTS version) for linux  
 and you can use LuminSDK Community, that's just a .cs file you can integrate on your project<br>
 LuminSDK Community is not avaible yet, cause it's based on LuminSDK, that's in early development, and is completely unstable.
+
+## LuminOS (First beta update)
+We're all happy to introduce you the first LuminOS beta that you can test. (we recommend you to test it on a VM btw)<br>
+[LuminOS neofetch screenshot placeholder]
+
+Bugs:<br>
+this is the first beta of LuminOS, so of course it have some bugs
+> 1] The system starts on GNOME by default, and you have to change it manually to Plasma (KDE)
+> 2] You tell me :P
+### OF COURSE this is just a test compilation, so RegEdit, LuminSDK and other stuff are not compiled, and is not on the system.
+Thanks to everyone who are helping to this project being reality<br>
+#### Made by:
+[Raice](https://github.com/RiceTheDev)
+[NyanRay64(me)](https://github.com/nixxlte)
