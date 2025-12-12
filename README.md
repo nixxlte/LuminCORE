@@ -30,14 +30,18 @@ LuminSDK Community is not avaible yet, cause it's based on LuminSDK, that's in e
 
 ## LuminOS (First beta update)
 We're all happy to introduce you the first LuminOS beta that you can test. (we recommend you to test it on a VM btw)<br>
-[LuminOS neofetch screenshot placeholder]
+<img width="854" height="642" alt="image" src="https://github.com/user-attachments/assets/fe83fca3-f27b-458b-8fe5-9dfdcb548376" />
+
+### Installed packages:
+> Tilix<br>
+> GNOME-Sushi
 
 Bugs:<br>
-this is the first beta of LuminOS, so of course it have some bugs
-> 1] The system starts on GNOME by default, and you have to change it manually to Plasma (KDE)
+> this is the first beta of LuminOS, so of course it have some bugs<br>
+> 1] The system starts on GNOME by default, and you have to change it manually to Plasma (KDE)<br>
 > 2] You tell me :P
 ### OF COURSE this is just a test compilation, so RegEdit, LuminSDK and other stuff are not compiled, and is not on the system.
 Thanks to everyone who are helping to this project being reality<br>
 #### Made by:
-[Raice](https://github.com/RiceTheDev)
+[Raice](https://github.com/RiceTheDev)<br>
 [NyanRay64(me)](https://github.com/nixxlte)
