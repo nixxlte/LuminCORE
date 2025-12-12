@@ -5,7 +5,7 @@ sudo apt update && sudo apt upgrade -y
 # Hi! this is the script that installs some dependencies, like DE, python, and the most important, dotnet (well, is a C# based OS, what are you expecting?)
 # this script also removes some conflicting packages, like ubuntu-desktop (from the base Ubuntu), it also substutes gnome-terminal with konsole (KDE terminal) and apt with nala
 
-su # this script needs root permissions, cause it installs and sets up somethings
+sudo su # this script needs root permissions, cause it installs and sets up somethings
 
 # Install and configure KDE-plasma
 echo "installing and seting up Plasma desktop..."
@@ -24,10 +24,26 @@ echo "done."
 # Install some dependencies
 echo "installing LuminOS dependencies..."
 apt install nala python3 python3-pip git wget neofetch -y
-snap install dotnet-sdk --classic
+sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-8.0
 snap install dotnet-runtime --classic
 snap install dotnet --classic
 dotnet new install Avalonia.Templates # Phantom GUI needs this, also almost every UI C# app on Lumin/Linux
+apt install qtchooser
+echo "done."
+
+# Install some Phantom dependencies
+echo "installing Phantom dependencies..."
+sudo apt install \
+    libsdl2-2.0-0 \
+    libsdl2-image-2.0-0 \
+    libsdl2-ttf-2.0-0 \
+    libsdl2-mixer-2.0-0 # Thanks to raice by helping me do the Phantom lib =3
+sudo apt install \
+    libsdl2-2.0-0 \
+    libsdl2-image-2.0-0 \
+    libsdl2-ttf-2.0-0 \
+    libsdl2-mixer-2.0-0
 echo "done."
 
 # Check the instalation

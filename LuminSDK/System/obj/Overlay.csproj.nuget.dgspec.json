@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "A:\\LuminOS\\LuminSDK\\System\\Overlay.csproj": {}
+    "/home/phoenix_/Documents/LuminCORE/LuminSDK/System/Overlay.csproj": {}
   },
   "projects": {
-    "A:\\LuminOS\\LuminSDK\\System\\Overlay.csproj": {
+    "/home/phoenix_/Documents/LuminCORE/LuminSDK/System/Overlay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\LuminOS\\LuminSDK\\System\\Overlay.csproj",
+        "projectUniqueName": "/home/phoenix_/Documents/LuminCORE/LuminSDK/System/Overlay.csproj",
         "projectName": "Overlay",
-        "projectPath": "A:\\LuminOS\\LuminSDK\\System\\Overlay.csproj",
-        "packagesPath": "C:\\Users\\PhoenixUwU\\.nuget\\packages\\",
-        "outputPath": "A:\\LuminOS\\LuminSDK\\System\\obj\\",
+        "projectPath": "/home/phoenix_/Documents/LuminCORE/LuminSDK/System/Overlay.csproj",
+        "packagesPath": "/home/phoenix_/.nuget/packages/",
+        "outputPath": "/home/phoenix_/Documents/LuminCORE/LuminSDK/System/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\PhoenixUwU\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/phoenix_/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,8 +37,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "10.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -66,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/256/sdk/8.0.407/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

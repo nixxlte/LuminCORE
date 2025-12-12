@@ -1,0 +1,42 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LuminSDK", "LuminSDK", "{5B3AA477-08B3-445D-98F2-C97AEA2DC4C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "System", "System", "{7146BE3F-78BE-D809-28BB-DDA24BC5AE0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overlay", "LuminSDK\System\Overlay.csproj", "{3102561A-ACD4-F557-1691-303806AB10B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Community", "Community", "{D062D03A-EAB3-3580-5C0D-1B6EB56958FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "LuminSDK\Community\Example\Example.csproj", "{46795514-DE5B-0D42-F9B0-DD2F5777BA90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3102561A-ACD4-F557-1691-303806AB10B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3102561A-ACD4-F557-1691-303806AB10B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3102561A-ACD4-F557-1691-303806AB10B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3102561A-ACD4-F557-1691-303806AB10B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46795514-DE5B-0D42-F9B0-DD2F5777BA90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46795514-DE5B-0D42-F9B0-DD2F5777BA90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46795514-DE5B-0D42-F9B0-DD2F5777BA90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46795514-DE5B-0D42-F9B0-DD2F5777BA90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7146BE3F-78BE-D809-28BB-DDA24BC5AE0A} = {5B3AA477-08B3-445D-98F2-C97AEA2DC4C3}
+		{3102561A-ACD4-F557-1691-303806AB10B6} = {7146BE3F-78BE-D809-28BB-DDA24BC5AE0A}
+		{D062D03A-EAB3-3580-5C0D-1B6EB56958FC} = {5B3AA477-08B3-445D-98F2-C97AEA2DC4C3}
+		{46795514-DE5B-0D42-F9B0-DD2F5777BA90} = {D062D03A-EAB3-3580-5C0D-1B6EB56958FC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {166B4CC7-D7AC-4E18-AE69-402524BCDE54}
+	EndGlobalSection
+EndGlobal

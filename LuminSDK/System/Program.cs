@@ -234,7 +234,7 @@ namespace Overlay {
                     ASCII("OSlogo");
                     Console.WriteLine();
                     Console.WriteLine("LuminOS, Beta 1");
-                    Console.WriteLine("Code writen by Nyan Nix\n");
+                    Console.WriteLine("Code writen by NyanRay64\n");
                     path = "Lumin/LuminSDK/TargetBuild";
                     if (registries.ContainsKey(path))
                     {
@@ -264,6 +264,7 @@ namespace Overlay {
                 doc.Load("Registry.xml");
             } catch (Exception ex) {
                 Console.WriteLine("Failed to load Registry.xml: " + ex.Message);
+                Thread.Sleep(3000);
                 return;
             }
 
