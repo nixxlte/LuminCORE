@@ -42,3 +42,5 @@
 desktop.ini
 .VolumeIcon.icns
 /Builds/
+*.sdkx
+*.runx

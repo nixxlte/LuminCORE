@@ -1,0 +1,2 @@
+/home/phoenix_/Documents/LuminCORE/LuminSDK/System/bin/Release/net8.0/linux-x64/publish/Overlay.pdb
+/home/phoenix_/Documents/LuminCORE/LuminSDK/System/bin/Release/net8.0/linux-x64/publish/Overlay

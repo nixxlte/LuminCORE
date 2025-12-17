@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "1IAhuHHA5ZI=",
+  "dgSpecHash": "0z+KjZS94GTNWT4bHn/EOOF58SA9a+YcyqLme7LW2Dvcia7ZsqkfywkETxxSk2SHssg2ZzXftxwduvzZzzmj1A==",
   "success": true,
   "projectFilePath": "/home/phoenix_/Documents/LuminCORE/LuminSDK/System/Overlay.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/phoenix_/.nuget/packages/microsoft.net.illink.tasks/8.0.22/microsoft.net.illink.tasks.8.0.22.nupkg.sha512",
+    "/home/phoenix_/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.22/microsoft.netcore.app.host.linux-x64.8.0.22.nupkg.sha512"
+  ],
   "logs": []
 }
