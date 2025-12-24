@@ -44,4 +44,5 @@ Bugs:<br>
 Thanks to everyone who are helping to this project being reality<br>
 #### Made by:
 [Raice](https://github.com/RiceTheDev)<br>
-[NyanRay64(me)](https://github.com/nixxlte)
+[NyanRay64(me)](https://github.com/nixxlte)<br>
+[Volt(that dont have github)](https://steamcommunity.com/profiles/76561199143876141)

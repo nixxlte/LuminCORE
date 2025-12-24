@@ -63,6 +63,12 @@ source ~/.bashrc
 nala update && nala upgrade -y
 echo "done."
 
+# Set up Phantom (build 2097 R2 or newer)
+cd ~/
+git clone https://github.com/nixxlte/Phantom
+cd Phantom
+apt install gcc
+
 # Final message
 neofetch
 echo "You're all set up! welcome to LuminOS!"
