@@ -14,7 +14,7 @@
 				<REG_DWORD Name="CanIuseCommunitySDK" Value="0"/> <!-- Community SDK doesnt have any compilations yet, so you cant use CommunitySDK by default -->
 			</CommunitySDK>
 			<Conteiner>
-				<REG_SZ Name="RunLocation" Value="/mnt/LuminConteiner" />
+				<REG_SZ Name="RunLocation" Value="~/container/LuminOS" />
 				<REG_DWORD Name="IsInstalled" Value="1" />
 			</Conteiner>
 		</Lumin>
