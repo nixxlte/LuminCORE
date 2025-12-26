@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/phoenix_/Documents/LuminCORE/LuminSDK/System/Overlay.csproj": {}
+    "/home/nyanray_/Documents/GitHub/LuminCORE/LuminSDK/System/Overlay.csproj": {}
   },
   "projects": {
-    "/home/phoenix_/Documents/LuminCORE/LuminSDK/System/Overlay.csproj": {
+    "/home/nyanray_/Documents/GitHub/LuminCORE/LuminSDK/System/Overlay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/phoenix_/Documents/LuminCORE/LuminSDK/System/Overlay.csproj",
+        "projectUniqueName": "/home/nyanray_/Documents/GitHub/LuminCORE/LuminSDK/System/Overlay.csproj",
         "projectName": "Overlay",
-        "projectPath": "/home/phoenix_/Documents/LuminCORE/LuminSDK/System/Overlay.csproj",
-        "packagesPath": "/home/phoenix_/.nuget/packages/",
-        "outputPath": "/home/phoenix_/Documents/LuminCORE/LuminSDK/System/obj/",
+        "projectPath": "/home/nyanray_/Documents/GitHub/LuminCORE/LuminSDK/System/Overlay.csproj",
+        "packagesPath": "/home/nyanray_/.nuget/packages/",
+        "outputPath": "/home/nyanray_/Documents/GitHub/LuminCORE/LuminSDK/System/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/phoenix_/.nuget/NuGet/NuGet.Config"
+          "/home/nyanray_/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -37,14 +37,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.NET.ILLink.Tasks": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.22, )",
-              "autoReferenced": true
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -56,23 +48,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[8.0.22, 8.0.22]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.122/PortableRuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
         }
       }
     }

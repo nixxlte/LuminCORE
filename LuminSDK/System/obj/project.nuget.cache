@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0z+KjZS94GTNWT4bHn/EOOF58SA9a+YcyqLme7LW2Dvcia7ZsqkfywkETxxSk2SHssg2ZzXftxwduvzZzzmj1A==",
+  "dgSpecHash": "7QIbDQwJiIXV3zYOj5JcuW0Eo/b9WblEuwOmmPku/CTRnfk7JwvgTlA9og4RXTNlWoXYScvfPcK7BWCwrXRTUg==",
   "success": true,
-  "projectFilePath": "/home/phoenix_/Documents/LuminCORE/LuminSDK/System/Overlay.csproj",
-  "expectedPackageFiles": [
-    "/home/phoenix_/.nuget/packages/microsoft.net.illink.tasks/8.0.22/microsoft.net.illink.tasks.8.0.22.nupkg.sha512",
-    "/home/phoenix_/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.22/microsoft.netcore.app.host.linux-x64.8.0.22.nupkg.sha512"
-  ],
+  "projectFilePath": "/home/nyanray_/Documents/GitHub/LuminCORE/LuminSDK/System/Overlay.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
