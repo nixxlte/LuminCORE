@@ -29,6 +29,7 @@
 # Executables
 *.out
 *.app
+*.runx
 
 # Other stuff
 *.idb
@@ -43,4 +44,3 @@ desktop.ini
 .VolumeIcon.icns
 /Builds/
 *.sdkx
-*.runx
