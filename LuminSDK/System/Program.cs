@@ -18,7 +18,7 @@ using System.Threading;
 // If i try to make my own kernel, the OS will not have any app stuff, and will be useless
 
 namespace Overlay {
-    // Code by NixxLTE UwU
+    // Code by NyanRay64 =3
     class Registry {
         public string Type { get; set; } = string.Empty;   // REG_SZ, REG_DWORD, etc.
         public string Name { get; set; } = string.Empty;   // <REG_TYPE Name="...">
