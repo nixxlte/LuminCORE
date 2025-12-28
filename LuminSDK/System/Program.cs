@@ -41,6 +41,8 @@ namespace Overlay {
         public static string SDKedition = "Lumin.Overlay.SDK.System"; // System package name
         public static int exceptionNumber = 0;
 
+        public static string StartAt = string.Empty; // lumin start sdk <argument>
+
         public static void catchError(string reason, string code) {
             errorcode = "Cx" + code;
             Console.WriteLine("An error occurred: " + reason + " Error code: " + errorcode);
@@ -67,7 +69,7 @@ namespace Overlay {
             exceptionNumber = exceptionNumber + 1;
             if (exceptionNumber >= 5) {
                 Console.WriteLine("Exception numbers exceeded the limit of 5, exiting");
-                Thread.Sleep(500);
+                Thread.Sleep(1000);
                 Environment.Exit(0);
             }
         }
@@ -221,8 +223,8 @@ namespace Overlay {
                     if (registries.ContainsKey(path)) {
                         Console.WriteLine($"Built for LuminOS build {registries[path].Value}\n");
                     }
-                    Console.WriteLine("for testing purposes only | code edition 20251226\n"); // im not using the REG key here cause it bugs the code completely
-                    break;                                                                    // also "20251226" is the date of last edit (19th November 2025)
+                    Console.WriteLine("for testing purposes only | code edition 20251228\n"); // im not using the REG key here cause it bugs the code completely
+                    break;                                                                    // also "20251228" is the date of last edit (28th December 2025)
                 case "ascii":                                                                 // and the date is used as the code version
                     if (args.Length == 0) {
                         Console.WriteLine("Usage: ascii [draw]\n");
@@ -248,7 +250,7 @@ namespace Overlay {
                     {
                         Console.WriteLine($"Running under LuminSDK build {registries[path].Value}");
                     }
-                    Console.WriteLine("for testing purposes only | code edition 20251226\n");
+                    Console.WriteLine("for testing purposes only | code edition 20251228\n");
                     break;
                 case "exception":
                     if (args.Length == 0) {
@@ -258,6 +260,16 @@ namespace Overlay {
                         exception(args[0]);
                         break;
                     }
+            }
+        }
+
+        public static void InitialCheckups(string argument) {
+            if (argument == string.Empty){
+                if (SDKedition == "Lumin.Overlay.SDK.System") { 
+                    while(true) { Bash(); }  // For testing purposes only, will be removed later (this is not a shell, just a compatibility layer)
+                } else { 
+                    Console.WriteLine("Usage: lumin start sdk <argument>");
+                }
             }
         }
 
@@ -286,11 +298,9 @@ namespace Overlay {
                 Console.WriteLine($"Running version: {registries[path].Value}\n");
             }
 
-            if (SDKedition == "Lumin.Overlay.SDK.System") { 
-                while(true) { Bash(); }  // For testing purposes only, will be removed later (this is not a shell, just a compatibility layer)
-            } else { 
-            
-            }
+            Console.Write("Enter startup argument");
+            StartAt = Console.ReadLine() ?? string.Empty;
+            InitialCheckups(StartAt);
         }
 
         static void regREAD(XmlNode node, string ActualPath, Dictionary<string, Registry> dict) {
