@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Overlay")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92e3b528e472020aff5989c16c3318d6a656f9d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c78a10542c27d85df70e043d4d836d27f9b5273")]
 [assembly: System.Reflection.AssemblyProductAttribute("Overlay")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Overlay")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -276,6 +276,10 @@ namespace Overlay {
                 } else { 
                     Console.WriteLine("Usage: lumin start sdk <argument>");
                 }
+            } else if (argument == "bash") {
+                while (true) { Bash(); }
+            } else {
+                Console.WriteLine("Unknown startup argument: " + argument);
             }
         }
 
@@ -304,7 +308,7 @@ namespace Overlay {
                 Console.WriteLine($"Running version: {registries[path].Value}\n");
             }
 
-            Console.Write("Enter startup argument");
+            Console.Write("Enter startup argument ");
             StartAt = Console.ReadLine() ?? string.Empty;
             InitialCheckups(StartAt);
         }
