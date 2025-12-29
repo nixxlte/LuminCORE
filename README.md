@@ -30,7 +30,7 @@ LuminSDK Community is not avaible yet, cause it's based on LuminSDK, that's in e
 
 ## LuminOS (First beta update)
 We're all happy to introduce you the first LuminOS beta that you can test. (we recommend you to test it on a VM btw)<br>
-<img width="854" height="642" alt="image" src="https://github.com/user-attachments/assets/fe83fca3-f27b-458b-8fe5-9dfdcb548376" />
+<img width="427" height="321" alt="image" src="https://github.com/user-attachments/assets/fe83fca3-f27b-458b-8fe5-9dfdcb548376" />
 
 ### Installed packages:
 > Tilix<br>
