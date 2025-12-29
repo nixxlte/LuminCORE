@@ -6,7 +6,7 @@
 				<REG_QWORD Name="InstalledVersion" Value="0.41.22" />
 				<REG_DWORD Name="TargetBuild" Value="2097" />
 				<REG_DWORD Name="CanIhaveOverlay" Value="1" />
-				<REG_DWORD Name="Edition" Value="20251228" />
+				<REG_DWORD Name="Edition" Value="20251229" />
 			</LuminSDK>
 			<CommunitySDK>
 				<REG_SZ Name="Channel" Value="Trunk" />

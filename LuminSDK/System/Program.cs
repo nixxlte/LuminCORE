@@ -223,9 +223,12 @@ namespace Overlay {
                     if (registries.ContainsKey(path)) {
                         Console.WriteLine($"Built for LuminOS build {registries[path].Value}\n");
                     }
-                    Console.WriteLine("for testing purposes only | code edition 20251228\n"); // im not using the REG key here cause it bugs the code completely
-                    break;                                                                    // also "20251228" is the date of last edit (28th December 2025)
-                case "ascii":                                                                 // and the date is used as the code version
+                    path = "Lumin/LuminSDK/Edition";
+                    if (registries.ContainsKey(path)) {
+                        Console.WriteLine($"for testing purposes only | code edition {registries[path].Value}\n");
+                    }
+                    break;                                                                   
+                case "ascii":                                                                 
                     if (args.Length == 0) {
                         Console.WriteLine("Usage: ascii [draw]\n");
                         break;
@@ -250,7 +253,10 @@ namespace Overlay {
                     {
                         Console.WriteLine($"Running under LuminSDK build {registries[path].Value}");
                     }
-                    Console.WriteLine("for testing purposes only | code edition 20251228\n");
+                    path = "Lumin/LuminSDK/Edition";
+                    if (registries.ContainsKey(path)) {
+                        Console.WriteLine($"for testing purposes only | code edition {registries[path].Value}\n");
+                    }
                     break;
                 case "exception":
                     if (args.Length == 0) {
@@ -283,7 +289,7 @@ namespace Overlay {
                 return;
             }
 
-            XmlNode? root = doc.SelectSingleNode("/registry/Hkey_ROOT");
+            XmlNode? root = doc.SelectSingleNode("/registry/HKEY_ROOT");
 
             // Use the static 'registries' field (clear any existing entries)
             registries.Clear();
