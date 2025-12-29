@@ -116,6 +116,15 @@ namespace Overlay {
             StartOverlay();
         }
 
+        public static void Help() {
+            Console.WriteLine("\n Available commands:");
+            Console.Write(" - echo [text]: Prints the text to the console\n");
+            Console.Write(" - break: Exits the LuminSDK Shell\n");
+            Console.Write(" - regedit [path]: Reads a registry value from Registry.xml\n");
+            Console.Write(" - console.clear: Clears the console\n");
+            Console.WriteLine(" - luminver: Show info about SDK\n");
+        }
+
         public static void Bash() {
             Console.Write("<Lumin@SDK> ");
             string command = Console.ReadLine() ?? string.Empty;
@@ -178,12 +187,10 @@ namespace Overlay {
                         break;
                     }
                 case "help":
-                    Console.WriteLine("Available commands:");
-                    Console.Write(" - echo [text]: Prints the text to the console\n");
-                    Console.Write(" - break: Exits the LuminSDK Shell\n");
-                    Console.Write(" - regedit [path]: Reads a registry value from Registry.xml\n");
-                    Console.Write(" - console.clear: Clears the console\n");
-                    Console.Write(" - luminver: Show info about SDK\n");
+                    Help();
+                    break;
+                case "?":
+                    Help();
                     break;
                 case "regedit":
                     if (args.Length == 0) {
