@@ -86,11 +86,9 @@ namespace Overlay {
 
         public static void ASCII(string draw) {
             if (string.Equals(draw, "OSlogo", StringComparison.OrdinalIgnoreCase)){
-                Console.WriteLine("{ L U M I N ]");
-                // start blinking (fire-and-forget)
-                if (!is_blinking) {
-                    _ = underscore(10);
-                }
+                blink_ = "_";
+                Console.Write("{ L U M I N ] " + blink_);
+                underscore(10).Wait();
             } else {
                 catchError("ASCII art not found", "0404");
             }
