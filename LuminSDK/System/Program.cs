@@ -194,8 +194,7 @@ namespace Overlay {
                     if (args.Length == 0) {
                         Console.WriteLine("Usage: regedit [path]\n");
                     } else {
-                        // pass the first argument as the registry path
-                        regedit(args[0]);
+                        regedit(args[0]); // Start regedit
                     }
                     break;
                 case "checkreg":
