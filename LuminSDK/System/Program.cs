@@ -54,9 +54,9 @@ namespace Overlay {
             is_blinking = true;
             while (is_blinking && blinked < times) {
                 blink_ = "_";
-                await Task.Delay(500);
+                await Task.Delay(100);
                 blink_ = " ";
-                await Task.Delay(500);
+                await Task.Delay(100);
                 blinked++;
             }
 
