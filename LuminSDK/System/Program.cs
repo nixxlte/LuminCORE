@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Threading;
+using System.ComponentModel.Design;
 
 // HII! That code is the first part of the LuminOS project, that was made to integrate C# with the Linux Kernel.
 // The focus of Lumin is create a Linux Distro based on C# and .NET technologies
@@ -313,7 +314,11 @@ namespace Overlay {
             }
 
             var StartAt = Environment.GetCommandLineArgs();
-            InitialCheckups(StartAt[1]);
+            if (StartAt.Length > 1) {
+                InitialCheckups(StartAt[1]);
+            } else {
+                InitialCheckups(string.Empty);
+            }
         }
 
         static void regREAD(XmlNode node, string ActualPath, Dictionary<string, Registry> dict) {
