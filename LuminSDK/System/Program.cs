@@ -312,8 +312,7 @@ namespace Overlay {
                 Console.WriteLine($"Running version: {registries[path].Value}\n");
             }
 
-            Console.Write("Enter startup argument ");
-            StartAt = Console.ReadLine() ?? string.Empty;
+            StartAt = Environment.GetCommandLineArgs().Length > 3 ? Environment.GetCommandLineArgs()[3] : string.Empty;
             InitialCheckups(StartAt);
         }
 
