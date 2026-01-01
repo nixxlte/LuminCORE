@@ -312,8 +312,8 @@ namespace Overlay {
                 Console.WriteLine($"Running version: {registries[path].Value}\n");
             }
 
-            StartAt = Environment.GetCommandLineArgs().Length > 3 ? Environment.GetCommandLineArgs()[3] : string.Empty;
-            InitialCheckups(StartAt);
+            var StartAt = Environment.GetCommandLineArgs();
+            InitialCheckups(StartAt[1]);
         }
 
         static void regREAD(XmlNode node, string ActualPath, Dictionary<string, Registry> dict) {
