@@ -148,7 +148,11 @@ namespace Overlay {
             if (registries.ContainsKey(path)) {
                 Console.WriteLine($"{path} value: {registries[path].Value}");
             } else {
-                Console.WriteLine($"{path}: path not found");
+                if (path == string.Empty) {
+                    Console.WriteLine("Usage: regedit [path inside HKEY_ROOT]");
+                } else {
+                    Console.WriteLine($"{path}: Registry key not found.");
+                }
             }
         }
 
