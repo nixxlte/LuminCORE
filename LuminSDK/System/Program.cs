@@ -170,7 +170,7 @@ namespace Overlay {
                         Console.WriteLine("Aborting end.");
                         break;
                     } else {
-                        Console.Write("Please type 'y' or 'n' ");
+                        Console.Write("Please type 'y' or 'n' T-T");
                         while (true) {
                             surely = Console.ReadLine() ?? string.Empty;
                             if (surely.ToLower() == "y" || surely.ToLower() == "yes") {
@@ -288,7 +288,7 @@ namespace Overlay {
             } else if (argument == "bash") {
                 while (true) { Bash(); }
             } else {
-                Console.WriteLine("Unknown startup argument: " + argument);
+                Console.WriteLine("Unknown startup argument: " + argument + "=|");
             }
         }
 
