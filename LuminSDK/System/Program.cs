@@ -283,16 +283,27 @@ namespace Overlay {
             }
         }
 
-        public static void InitialCheckups(string argument) {
-            if (argument == string.Empty){
+        public static void InitialCheckups(string[] argument) {
+            if (argument[1] == string.Empty){
                 if (SDKedition == "Lumin.Overlay.SDK.System") { 
                     while(true) { Bash(); }  // For testing purposes only, will be removed later (this is not a shell, just a compatibility layer)
                 } else { 
                     Console.WriteLine("Usage: lumin start sdk <argument>");
                 }
-            } else if (argument == "bash") {
+            } else if (argument[1] == "bash") {
                 while (true) { Bash(); }
-            } else {
+            }
+            else if (argument[1] == "help") {
+                Help();                
+            } else if (argument[1] == "regedit") {
+                if (argument.Length < 3) {
+                    Console.WriteLine("Usage: lumin start sdk regedit [path]");
+                }
+                else if (argument.Length >= 3) {
+                    regedit(argument[2]);
+                }
+            }
+            else {
                 Console.WriteLine("Unknown startup argument: " + argument + "=|");
             }
         }
@@ -324,9 +335,9 @@ namespace Overlay {
 
             var StartAt = Environment.GetCommandLineArgs();
             if (StartAt.Length > 1) {
-                InitialCheckups(StartAt[1]);
+                InitialCheckups(StartAt);
             } else {
-                InitialCheckups(string.Empty);
+                InitialCheckups(new string[] { "" });
             }
         }
 
