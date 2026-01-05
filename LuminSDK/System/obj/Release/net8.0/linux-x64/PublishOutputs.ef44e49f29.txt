@@ -1,0 +1,2 @@
+/home/nyanray_/Documents/GitHub/LuminCORE/LuminSDK/System/bin/Release/net8.0/linux-x64/publish/Overlay.pdb
+/home/nyanray_/Documents/GitHub/LuminCORE/LuminSDK/System/bin/Release/net8.0/linux-x64/publish/Overlay
