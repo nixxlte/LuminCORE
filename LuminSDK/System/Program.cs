@@ -8,12 +8,13 @@ using System.Xml;
 using System.Threading;
 using System.ComponentModel.Design;
 
-// HII! That code is the first part of the LuminOS project, that was made to integrate C# with the Linux Kernel.
+// HII! That code is the first part of the LuminOS project, that was made to create C# programs natively for Linux
 // The focus of Lumin is create a Linux Distro based on C# and .NET technologies
 // (together with AvaloniaUI, cause its a cool project :D )
 
 // Specifically, "overlay" is the layer that can use C# things with the system
 // Basically, Linux (and Ubuntu) is just the base, but almost everything is made in C#
+// so, "Overlay" means the LuminSDK together with the "lumin" command inside the LuminOS terminal
 // also, Linux is important here cause its... the non-C# parts, WE JUST WANT C#, and some other stuff.
 // Like KDE, and what i want to say is that Linux already have a lot of apps, like VS Code, Firefox, Python, etc.
 // If i try to make my own kernel, the OS will not have any app stuff, and will be useless
