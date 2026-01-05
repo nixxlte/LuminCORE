@@ -297,7 +297,7 @@ namespace Overlay {
             try {
                 doc.Load("Registry.xml");
             } catch (Exception ex) {
-                Console.WriteLine("Failed to load Registry.xml: " + ex.Message);
+                Console.WriteLine("Failed to load Registry.xml: " + ex.Message + "=|");
                 Thread.Sleep(3000);
                 return;
             }
