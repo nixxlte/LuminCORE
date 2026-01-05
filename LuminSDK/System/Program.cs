@@ -146,9 +146,9 @@ namespace Overlay {
             }
 
             if (registries.ContainsKey(path)) {
-                Console.WriteLine($"Requested registry value: {registries[path].Value}");
+                Console.WriteLine($"{path} value: {registries[path].Value}");
             } else {
-                Console.WriteLine($"Registry path not found: {path}");
+                Console.WriteLine($"{path}: path not found");
             }
         }
 
