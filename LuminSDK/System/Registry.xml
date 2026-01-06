@@ -5,7 +5,7 @@
 			<REG_DWORD Name="Beta" Value="2" /> <!-- LuminOS Beta 2 -->
 			<LuminSDK>
 				<REG_QWORD Name="InstalledVersion" Value="0.45.04" />
-				<REG_DWORD Name="TargetBuild" Value="209702" />
+				<REG_DWORD Name="TargetBuild" Value="209706" />
 				<REG_DWORD Name="CanIhaveOverlay" Value="1" />
 				<REG_DWORD Name="Edition" Value="20260101" />
 			</LuminSDK>
