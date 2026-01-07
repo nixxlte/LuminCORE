@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Threading;
 using System.ComponentModel.Design;
+using System.Xml.Linq;
+using System.Data.Common;
 
 // HII! That code is the first part of the LuminOS project, that was made to create C# programs natively for Linux
 // The focus of Lumin is create a Linux Distro based on C# and .NET technologies
@@ -139,20 +141,35 @@ namespace Overlay {
             CMDchk(binary, cmdArgs);
         }
 
-        public static void regedit(string path) { 
-            Console.WriteLine("Regedit BETA 2, for testing purposes only.");
-            if (string.IsNullOrWhiteSpace(path)) {
-                Console.WriteLine("No path provided.");
-                return;
-            }
+        public static void regedit() { 
+            Console.Clear();
+            Console.WriteLine("Registry Editor Beta 3\n For testing purposes only\n \n");
+            var doc = XDocument.Load("Registry.xml");
+            foreach (var element in doc.Descendants()) {
+                bool text = !string.IsNullOrWhiteSpace(element.Value) && !element.HasElements;
+                bool attribute = element.HasAttributes;
 
-            if (registries.ContainsKey(path)) {
-                Console.WriteLine($"{path} value: {registries[path].Value}");
-            } else {
-                if (path == string.Empty) {
-                    Console.WriteLine("Usage: regedit [path inside HKEY_ROOT]");
-                } else {
-                    Console.WriteLine($"{path}: Registry key not found.");
+                //Console.Write(
+                //    $"{element.Name} {element.Value} : "
+                //);
+                //foreach (var attr in element.Attributes()) {
+                //    Console.WriteLine($"{attr.Name} : {attr.Value} ");
+                //}
+
+                if (!text && !attribute) {
+                    Console.WriteLine($"{element.Name}");
+                    //continue;
+                } else if (text || attribute) {
+                    Console.Write($"{element.Name} ");
+                }
+                //Console.WriteLine($"{element.Name}");
+                if (text) {
+                    Console.Write($"\tValue: {element.Value}");
+                }
+                if (attribute) {
+                    foreach (var attr in element.Attributes()) {
+                        Console.WriteLine($"\n\t{attr.Name}: {attr.Value}");
+                    }
                 }
             }
         }
@@ -197,11 +214,7 @@ namespace Overlay {
                     Help();
                     break;
                 case "regedit":
-                    if (args.Length == 0) {
-                        Console.WriteLine("Usage: regedit [path]\n");
-                    } else {
-                        regedit(args[0]); // Start regedit
-                    }
+                    regedit();
                     break;
                 case "checkreg":
                     if (args.Length == 0) {
@@ -296,12 +309,7 @@ namespace Overlay {
             else if (argument[1] == "help") {
                 Help();                
             } else if (argument[1] == "regedit") {
-                if (argument.Length < 3) {
-                    Console.WriteLine("Usage: lumin start sdk regedit [path]");
-                }
-                else if (argument.Length >= 3) {
-                    regedit(argument[2]);
-                }
+                regedit();
             }
             else {
                 Console.WriteLine("Unknown startup argument: " + argument + "=|");
