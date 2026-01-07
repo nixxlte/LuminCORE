@@ -148,6 +148,7 @@ namespace Overlay {
             foreach (var element in doc.Descendants()) {
                 bool text = !string.IsNullOrWhiteSpace(element.Value) && !element.HasElements;
                 bool attribute = element.HasAttributes;
+                string count = string.Empty;
 
                 //Console.Write(
                 //    $"{element.Name} {element.Value} : "
@@ -157,7 +158,8 @@ namespace Overlay {
                 //}
 
                 if (!text && !attribute) {
-                    Console.WriteLine($"{element.Name}");
+                    Console.WriteLine($"{count}{element.Name}");
+                    count += " ‎";
                     //continue;
                 } else if (text || attribute) {
                     Console.Write($"{element.Name} ");
