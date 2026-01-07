@@ -16,11 +16,15 @@ LuminOS itself isn't written entirely in C#, as that would be unfeasible, due to
 - Clone this repo  
 Enter this folder:
 ```
-<cloned_repo>/LuminSDK/bin/Debug/net8.0/
+<cloned_repo>/LuminSDK/System/
 ```
 - Open a terminal on that folder and run:
 ```
-Overlay
+./Build.sh
+```
+- Then a file called "overlay.sdkx" will be created in the folder "bin/Relase/net8.0/linux-x64/publish/" <br> inside the LuminSDK/System folder <br> so you can enter that folder and run:
+```
+chmod +x overlay.sdkx && ./overlay.sdkx
 ```
 This will start LuminSDK, on a terminal emulator.<br>
 ### Also
