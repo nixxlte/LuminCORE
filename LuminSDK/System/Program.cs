@@ -314,8 +314,7 @@ namespace Overlay {
                 regedit();
             } else if (argument[1] == "lmver") {
                 CMDchk("osver");
-            }
-            else {
+            } else {
                 Console.WriteLine("Unknown startup argument: " + argument + "=|");
             }
         }
