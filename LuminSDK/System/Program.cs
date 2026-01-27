@@ -267,19 +267,16 @@ namespace Overlay {
                     ASCII("OSlogo");
                     Console.WriteLine();
                     path = "Lumin/Beta";
-                    if (registries.ContainsKey(path))
-                    {
+                    if (registries.ContainsKey(path)) {
                         Console.WriteLine($"LuminOS, Beta {registries[path].Value}");
                     }
                     Console.WriteLine("Code writen by NyanRay64\n");
                     path = "Lumin/LuminSDK/TargetBuild";
-                    if (registries.ContainsKey(path))
-                    {
+                    if (registries.ContainsKey(path)) {
                         Console.WriteLine($"LuminOS build {registries[path].Value}\n");
                     }
                     path = "Lumin/LuminSDK/InstalledVersion";
-                    if (registries.ContainsKey(path))
-                    {
+                    if (registries.ContainsKey(path)) {
                         Console.WriteLine($"Running under LuminSDK build {registries[path].Value}");
                     }
                     path = "Lumin/LuminSDK/Edition";
