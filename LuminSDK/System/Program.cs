@@ -176,6 +176,30 @@ namespace Overlay {
             }
         }
 
+        public static void neofetch() {
+            Console.Clear();
+            Console.WriteLine();
+            ASCII("OSlogo");
+            Console.WriteLine();
+            string path = "Lumin/Beta";
+            if (registries.ContainsKey(path)) {
+                Console.WriteLine($"LuminOS, Beta {registries[path].Value}");
+            }
+            Console.WriteLine("Code writen by NyanRay64\n");
+            path = "Lumin/LuminSDK/TargetBuild";
+            if (registries.ContainsKey(path)) {
+                Console.WriteLine($"LuminOS build {registries[path].Value}\n");
+            }
+            path = "Lumin/LuminSDK/InstalledVersion";
+            if (registries.ContainsKey(path)) {
+                Console.WriteLine($"Running under LuminSDK build {registries[path].Value}");
+            }
+            path = "Lumin/LuminSDK/Edition";
+            if (registries.ContainsKey(path)) {
+                Console.WriteLine($"for testing purposes only | code edition {registries[path].Value}\n");
+            }
+        }
+
         public static void CMDchk(string binary, string[] args) {
             switch (binary.ToLower()) {
                 default:
@@ -262,27 +286,7 @@ namespace Overlay {
                         break;
                     }
                 case "osver":
-                    Console.Clear();
-                    Console.WriteLine();
-                    ASCII("OSlogo");
-                    Console.WriteLine();
-                    path = "Lumin/Beta";
-                    if (registries.ContainsKey(path)) {
-                        Console.WriteLine($"LuminOS, Beta {registries[path].Value}");
-                    }
-                    Console.WriteLine("Code writen by NyanRay64\n");
-                    path = "Lumin/LuminSDK/TargetBuild";
-                    if (registries.ContainsKey(path)) {
-                        Console.WriteLine($"LuminOS build {registries[path].Value}\n");
-                    }
-                    path = "Lumin/LuminSDK/InstalledVersion";
-                    if (registries.ContainsKey(path)) {
-                        Console.WriteLine($"Running under LuminSDK build {registries[path].Value}");
-                    }
-                    path = "Lumin/LuminSDK/Edition";
-                    if (registries.ContainsKey(path)) {
-                        Console.WriteLine($"for testing purposes only | code edition {registries[path].Value}\n");
-                    }
+                    neofetch();
                     break;
                 case "exception":
                     if (args.Length == 0) {
@@ -310,9 +314,9 @@ namespace Overlay {
             } else if (argument[1] == "regedit") {
                 regedit();
             } else if (argument[1] == "lmver") {
-                CMDchk("osver");
+                neofetch();
             } else {
-                Console.WriteLine("Unknown startup argument: " + argument + "=|");
+                Console.WriteLine("Unknown startup argument: " + argument + " =|");
             }
         }
 
