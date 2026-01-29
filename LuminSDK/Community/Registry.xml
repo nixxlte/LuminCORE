@@ -2,24 +2,26 @@
 <registry>
 	<HKEY_ROOT>
 		<Lumin>
+			<REG_DWORD Name="Beta" Value="2" /> <!-- LuminOS Beta 2 -->
 			<LuminSDK>
-				<REG_QWORD Name="InstalledVersion" Value="0.41.22" />
-				<REG_DWORD Name="TargetBuild" Value="2093" />
+				<REG_QWORD Name="InstalledVersion" Value="0.45.04" />
+				<REG_DWORD Name="TargetBuild" Value="3020" />
 				<REG_DWORD Name="CanIhaveOverlay" Value="1" />
-				<REG_DWORD Name="Edition" Value="20251123" />
+				<REG_DWORD Name="Edition" Value="20260129" />
 			</LuminSDK>
 			<CommunitySDK>
 				<REG_SZ Name="Channel" Value="Trunk" />
 				<REG_DWORD Name="InstalledVersion" Value="0" />
 				<REG_DWORD Name="CanIuseCommunitySDK" Value="0"/> <!-- Community SDK doesnt have any compilations yet, so you cant use CommunitySDK by default -->
 			</CommunitySDK>
-			<Conteiner>
-				<REG_SZ Name="RunLocation" Value="/mnt/LuminConteiner" />
+			<Container>
+				<REG_SZ Name="RunLocation" Value="~/container/LuminOS" />
 				<REG_DWORD Name="IsInstalled" Value="1" />
-			</Conteiner>
+			</Container>
 		</Lumin>
 		<PhantomUI>
 			<REG_DWORD Name="IsRunning" Value="0" />
+			<REG_DWORD Name="PhantomCompilation" Value="2" /> <!-- 0 = Python; 1 = C#; 2 = C++ -->
 		</PhantomUI>
 	</HKEY_ROOT>
 </registry>

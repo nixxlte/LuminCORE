@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nN2K8GQ1kxw=",
+  "dgSpecHash": "v6vW9rQCHVM=",
   "success": true,
-  "projectFilePath": "A:\\LuminOS\\LuminSDK\\Community\\Example\\Example.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/nyanray_/Documents/GitHub/LuminCORE/LuminSDK/Community/Example/Example.csproj",
+  "expectedPackageFiles": [
+    "/home/nyanray_/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.0/microsoft.aspnetcore.app.ref.10.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

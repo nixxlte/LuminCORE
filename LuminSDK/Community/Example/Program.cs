@@ -17,7 +17,7 @@ namespace myprogram
             Console.WriteLine("this is a luminSDK program");
             SDK.catchError("This is a test error", "2090");
             SDK.catchError("This code doesnt do anything", "123789456");
-            SDK.exception("If you catch 3 or more exception, the program crashes", "10930");
+            SDK.exception("This is an exception example");
         }
     }
 }
