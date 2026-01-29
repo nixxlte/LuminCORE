@@ -98,6 +98,11 @@ namespace Overlay {
             }
         }
 
+        public static void echo(string message) {
+            Console.WriteLine($"{message}");
+            message = string.Empty;
+        }
+
         public static void checkREG(string path, bool exist, bool isDEBUG){
             exist = false;                                               
             if (registries.ContainsKey(path)) {                     
@@ -114,7 +119,6 @@ namespace Overlay {
         }
 
         public static void Main(string[] args) {
-            Console.WriteLine("Hello, World!\n");
             StartOverlay();
         }
 
@@ -307,6 +311,7 @@ namespace Overlay {
                     Console.WriteLine("Usage: lumin start sdk <argument>");
                 }
             } else if (argument[1] == "bash") {
+                Console.WriteLine("Hello, World!\n");
                 while (true) { Bash(); }
             }
             else if (argument[1] == "help") {
@@ -315,6 +320,8 @@ namespace Overlay {
                 regedit();
             } else if (argument[1] == "lmver") {
                 neofetch();
+            } else if (argument[1] == "echo") {
+                echo(argument[2]);
             } else {
                 Console.WriteLine("Unknown startup argument: " + argument + " =|");
             }
@@ -342,7 +349,7 @@ namespace Overlay {
             // Example to access a specific registry value
             string path = "Lumin/LuminSDK/InstalledVersion";
             if (registries.ContainsKey(path)) {
-                Console.WriteLine($"Running version: {registries[path].Value}\n");
+                // Console.WriteLine($"Running version: {registries[path].Value}\n");
             }
 
             var StartAt = Environment.GetCommandLineArgs();
