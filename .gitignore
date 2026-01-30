@@ -41,6 +41,7 @@
 *.iso
 /System/Decompressed/
 desktop.ini
+Template.zip
 .VolumeIcon.icns
 /Builds/
 *.sdkx

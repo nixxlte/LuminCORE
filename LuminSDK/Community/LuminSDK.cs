@@ -42,7 +42,7 @@ namespace LuminSDK {
 
         public static string errorcode = "Cx0000"; // Default error code
 
-        public static string SDKedition = "Lumin.Overlay.SDK.System"; // System package name
+        public static string SDKedition = "Lumin.Overlay.SDK.Community"; // System package name
         public static int exceptionNumber = 0;
 
         public static string StartAt = string.Empty; // lumin start sdk <argument>
