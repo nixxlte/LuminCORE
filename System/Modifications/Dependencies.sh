@@ -14,10 +14,15 @@ systemctl enable gdm3
 apt remove ubuntu-desktop
 echo "done."
 
+# Set-up new user setting
+mkdir /home/luminos
+cd /home/luminos
+
 # Install some KDE apps, instead of GNOME apps
 echo "installing KDE applications..."
 apt install kde-applications -y
 apt remove gnome-terminal -y
+apt install nautilus -y
 apt install gnome-sushi -y # i know, is contradictory, but gnome-sushi is a nice file previewer and Ubuntu already needs nautilus to work properly
 apt install tilix # a good terminal emulator :D
 echo "done."
