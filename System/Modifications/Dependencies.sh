@@ -5,6 +5,8 @@ sudo apt update && sudo apt upgrade -y
 # Hi! this is the script that installs some dependencies, like DE, python, and the most important, dotnet (well, is a C# based OS, what are you expecting?)
 # this script also removes some conflicting packages, like ubuntu-desktop (from the base Ubuntu), it also substutes gnome-terminal with konsole (KDE terminal) and apt with nala
 
+# Code by NyanRay64 =3
+
 sudo su # this script needs root permissions, cause it installs and sets up somethings
 
 # Install and configure KDE-plasma
@@ -17,6 +19,10 @@ echo "done."
 # Set-up new user setting
 mkdir /home/luminos
 cd /home/luminos
+git clone https://github.com/nixxlte/LuminCORE
+cd LuminCORE/System/Modifications
+cp NewUser.sh /home/
+echo "when you create a new user pls run 'sudo /home/NewUser.sh'"
 
 # Install some KDE apps, instead of GNOME apps
 echo "installing KDE applications..."
