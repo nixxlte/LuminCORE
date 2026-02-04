@@ -24,5 +24,14 @@ else
 fi
 
 if [ "$1" = "-f" ]; then
-  echo "force installing dependencies (DEBIAN ONLY)"
+  # echo "force installing dependencies (DEBIAN ONLY)"
+  if [ "$2" = "-deb" ]; then
+    echo "force installing dependencies (DEBIAN MODE)"
+  elif [ "$2" = "-dnf" ]; then
+    echo "force installing dependencies (FEDORA MODE)"
+  elif [ "$2" = "-pacman" ]; then
+    echo "force installing dependencies (ARCH MODE)"
+  else
+    echo "force installing dependencies (DEBIAN DEFAULT)"
+  fi
 fi
