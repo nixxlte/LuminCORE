@@ -3,12 +3,25 @@ if [ -n "$BASH_VERSION" ]; then
     echo " "
 fi
 
+new-usersetting() {
+  mkdir /home/luminos
+  cd /home/luminos
+  git clone https://github.com/nixxlte/LuminCORE
+  cd LuminCORE/System/Modifications
+  cp NewUser.sh /home/
+  echo "when you create a new user pls run 'sudo /home/NewUser.sh'"
+}
+
 debian() {
   sudo apt update && sudo apt upgrade
   echo "installing and setting up Plasma desktop..."
   sudo apt install kde-plasma -y
   sudo apt install gdm -y
   sudo systemctl enable gdm3
+  echo "done."
+  new-usersetting
+  # Install some KDE apps
+  echo "installing KDE applications..."
 }
 
 fedora() {
@@ -17,6 +30,9 @@ fedora() {
   sudo dnf install plasma-desktop -y
   sudo dnf install gdm -y
   sudo systemctl enable gdm3
+  echo "done."
+  new-usersetting
+  echo "installing KDE applications..."
 }
 
 arch() {
@@ -25,6 +41,9 @@ arch() {
   sudo pacman -S plasma-desktop -y
   sudo pacman -S gdm -y
   sudo systemctl enable gdm3
+  echo "done."
+  new-usersetting
+  echo "installing KDE applications..."
 }
 
 # Code by NyanRay64 =3
