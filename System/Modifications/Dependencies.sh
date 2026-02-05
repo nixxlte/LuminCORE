@@ -5,18 +5,29 @@ fi
 
 debian() {
   sudo apt update && sudo apt upgrade
+  echo "installing and setting up Plasma desktop..."
+  sudo apt install kde-plasma -y
+  sudo apt install gdm -y
+  sudo systemctl enable gdm3
 }
 
 fedora() {
   sudo dnv update && sudo dnf upgrade
+  echo "installing and setting up Plasma desktop..."
+  sudo dnf install plasma-desktop -y
+  sudo dnf install gdm -y
+  sudo systemctl enable gdm3
 }
 
 arch() {
   sudo pacman -Syu
+  echo "installing and setting up Plasma desktop..."
+  sudo pacman -S plasma-desktop -y
+  sudo pacman -S gdm -y
+  sudo systemctl enable gdm3
 }
 
 # Code by NyanRay64 =3
-
 if [ "$1" = "-f" ]; then
   # echo "force installing dependencies (DEBIAN ONLY)"
   if [ "$2" = "-deb" ]; then
