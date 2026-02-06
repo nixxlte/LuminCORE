@@ -22,6 +22,7 @@ debian() {
   new-usersetting
   # Install some KDE apps
   echo "installing KDE applications..."
+  sudo apt install kde-applications
 }
 
 fedora() {
@@ -33,6 +34,7 @@ fedora() {
   echo "done."
   new-usersetting
   echo "installing KDE applications..."
+  sudo dnf install kde-applications
 }
 
 arch() {
@@ -44,6 +46,7 @@ arch() {
   echo "done."
   new-usersetting
   echo "installing KDE applications..."
+  sudo pacman -S kde-applications
 }
 
 # Code by NyanRay64 =3
