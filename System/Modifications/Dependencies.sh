@@ -3,6 +3,12 @@ if [ -n "$BASH_VERSION" ]; then
     echo " "
 fi
 
+# Hi! this is the script that installs some dependencies, like DE, python, and the most important, dotnet (well, is a C# based OS, what are you expecting?)
+# this script also removes some conflicting packages, like ubuntu-desktop (from the base Ubuntu), it also substutes gnome-terminal with konsole (KDE terminal) and apt with nala
+
+# Code by NyanRay64 =3
+
+# Configure the newuser.sh
 new-usersetting() {
   mkdir /home/luminos
   cd /home/luminos
@@ -14,16 +20,19 @@ new-usersetting() {
 
 debian() {
   sudo apt update && sudo apt upgrade
-  echo "installing and setting up Plasma desktop..."
+  echo "installing and setting up Plasma desktop and utilities..."
   sudo apt install kde-plasma -y
   sudo apt install gdm -y
   sudo systemctl enable gdm3
   echo "done."
   new-usersetting
   # Install some KDE apps
-  echo "installing KDE applications..."
+  echo "installing KDE applications and utilities..."
   sudo apt install kde-applications
   sudo apt install tilix
+  sudo apt install nautilus
+  sudo apt install gnome-sushi -y # i know, is contradictory, but gnome-sushi is a nice file previewer and Ubuntu already needs nautilus to work properly
+  echo "done."
 }
 
 fedora() {
@@ -34,9 +43,12 @@ fedora() {
   sudo systemctl enable gdm3
   echo "done."
   new-usersetting
-  echo "installing KDE applications..."
+  echo "installing KDE applications and utilities..."
   sudo dnf install kde-applications
   sudo dnf install tilix
+  sudo dnf install nautilus
+  sudo dnf install gnome-sushi
+  echo "done."
 }
 
 arch() {
@@ -47,12 +59,14 @@ arch() {
   sudo systemctl enable gdm3
   echo "done."
   new-usersetting
-  echo "installing KDE applications..."
+  echo "installing KDE applications and utilities..."
   sudo pacman -S kde-applications
   yay -S tilix
+  sudo pacman -S nautilus
+  yay -S sushi
+  echo "done."
 }
 
-# Code by NyanRay64 =3
 if [ "$1" = "-f" ]; then
   # echo "force installing dependencies (DEBIAN ONLY)"
   if [ "$2" = "-deb" ]; then
