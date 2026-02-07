@@ -23,6 +23,7 @@ debian() {
   # Install some KDE apps
   echo "installing KDE applications..."
   sudo apt install kde-applications
+  sudo apt install tilix
 }
 
 fedora() {
@@ -35,6 +36,7 @@ fedora() {
   new-usersetting
   echo "installing KDE applications..."
   sudo dnf install kde-applications
+  sudo dnf install tilix
 }
 
 arch() {
@@ -47,6 +49,7 @@ arch() {
   new-usersetting
   echo "installing KDE applications..."
   sudo pacman -S kde-applications
+  yay -S tilix
 }
 
 # Code by NyanRay64 =3
