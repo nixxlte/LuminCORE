@@ -33,6 +33,16 @@ debian() {
   sudo apt install nautilus
   sudo apt install gnome-sushi -y # i know, is contradictory, but gnome-sushi is a nice file previewer and Ubuntu already needs nautilus to work properly
   echo "done."
+  echo "installing LuminOS dependencies..."
+  sudo apt install nala python3 python3-pip git wget neofetch -y
+  sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-8.0
+  sudo apt install snapd
+  snap install dotnet-runtime --classic
+  snap install dotnet --classic
+  dotnet new install Avalonia.Templates # Phantom GUI needs this, also almost every UI C# app on Lumin/Linux
+  sudo apt install qtchooser
+  echo "done."
 }
 
 fedora() {
@@ -49,6 +59,15 @@ fedora() {
   sudo dnf install nautilus
   sudo dnf install gnome-sushi
   echo "done."
+  echo "installing LuminOS dependencies..."
+  sudo dnf install python3 python3-pip git wget neofetch -y
+  sudo dnf update && sudo dnf install dotnet-sdk-8.0 -y
+  sudo dnf install snapd
+  snap install dotnet-runtime --classic
+  snap install dotnet --classic
+  dotnet new install Avalonia.Templates # Phantom GUI needs this, also almost every UI C# app on Lumin/Linux
+  sudo dnf install qtchooser
+  echo "done."
 }
 
 arch() {
@@ -64,6 +83,15 @@ arch() {
   yay -S tilix
   sudo pacman -S nautilus
   yay -S sushi
+  echo "done."
+  echo "installing LuminOS dependencies..."
+  sudo pacman -S python3 python3-pip git wget fastfetch -y
+  sudo pacman -Syu && sudo pacman -S dotnet-sdk-8.0
+  yay -S snapd
+  snap install dotnet-runtime --classic
+  snap install dotnet --classic
+  dotnet new install Avalonia.Templates # Phantom GUI needs this, also almost every UI C# app on Lumin/Linux
+  yay -S qfsm
   echo "done."
 }
 
