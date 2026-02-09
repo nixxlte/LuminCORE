@@ -119,6 +119,8 @@ arch() {
   dotnet new install Avalonia.Templates # Phantom GUI needs this, also almost every UI C# app on Lumin/Linux
   yay -S qfsm
   echo "done."
+  sudo pacman -S sdl2_image sdl2_ttf sdl2 sdl2_mixer
+  echo "done."
 }
 
 if [ "$1" = "-f" ]; then
