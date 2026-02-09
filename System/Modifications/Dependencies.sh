@@ -43,6 +43,19 @@ debian() {
   dotnet new install Avalonia.Templates # Phantom GUI needs this, also almost every UI C# app on Lumin/Linux
   sudo apt install qtchooser
   echo "done."
+  # Install some Phantom dependencies
+echo "installing Phantom dependencies..."
+sudo apt install \
+    libsdl2-2.0-0 \
+    libsdl2-image-2.0-0 \
+    libsdl2-ttf-2.0-0 \
+    libsdl2-mixer-2.0-0 # Thanks to raice by helping me do the Phantom lib =3
+sudo apt install \
+    libsdl2-2.0-0 \
+    libsdl2-image-2.0-0 \
+    libsdl2-ttf-2.0-0 \
+    libsdl2-mixer-2.0-0
+echo "done."
 }
 
 fedora() {
@@ -67,6 +80,19 @@ fedora() {
   snap install dotnet --classic
   dotnet new install Avalonia.Templates # Phantom GUI needs this, also almost every UI C# app on Lumin/Linux
   sudo dnf install qtchooser
+  echo "done."
+  # Install some Phantom dependencies
+  echo "installing Phantom dependencies..."
+  sudo dnf install \
+      libsdl2-2.0-0 \
+      libsdl2-image-2.0-0 \
+      libsdl2-ttf-2.0-0 \
+      libsdl2-mixer-2.0-0 # Thanks to raice by helping me do the Phantom lib =3
+  sudo dnf install \
+      libsdl2-2.0-0 \
+      libsdl2-image-2.0-0 \
+      libsdl2-ttf-2.0-0 \
+      libsdl2-mixer-2.0-0
   echo "done."
 }
 
