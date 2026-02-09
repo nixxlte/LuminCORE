@@ -18,6 +18,16 @@ new-usersetting() {
   echo "when you create a new user pls run 'sudo /home/NewUser.sh'"
 }
 
+check-install() {
+  echo "making sure everything is okay..."
+  dotnet --list-sdks
+  dotnet --list-runtimes
+  git --version
+  nala --version
+  python3 --version
+  echo "done."
+}
+
 debian() {
   sudo apt update && sudo apt upgrade
   echo "installing and setting up Plasma desktop and utilities..."
@@ -44,18 +54,19 @@ debian() {
   sudo apt install qtchooser
   echo "done."
   # Install some Phantom dependencies
-echo "installing Phantom dependencies..."
-sudo apt install \
-    libsdl2-2.0-0 \
-    libsdl2-image-2.0-0 \
-    libsdl2-ttf-2.0-0 \
-    libsdl2-mixer-2.0-0 # Thanks to raice by helping me do the Phantom lib =3
-sudo apt install \
-    libsdl2-2.0-0 \
-    libsdl2-image-2.0-0 \
-    libsdl2-ttf-2.0-0 \
-    libsdl2-mixer-2.0-0
-echo "done."
+  echo "installing Phantom dependencies..."
+  sudo apt install \
+      libsdl2-2.0-0 \
+      libsdl2-image-2.0-0 \
+      libsdl2-ttf-2.0-0 \
+      libsdl2-mixer-2.0-0 # Thanks to raice by helping me do the Phantom lib =3
+  sudo apt install \
+      libsdl2-2.0-0 \
+      libsdl2-image-2.0-0 \
+      libsdl2-ttf-2.0-0 \
+      libsdl2-mixer-2.0-0
+  echo "done."
+  check-install
 }
 
 fedora() {
@@ -94,6 +105,7 @@ fedora() {
       libsdl2-ttf-2.0-0 \
       libsdl2-mixer-2.0-0
   echo "done."
+  check-install
 }
 
 arch() {
@@ -121,6 +133,7 @@ arch() {
   echo "done."
   sudo pacman -S sdl2_image sdl2_ttf sdl2 sdl2_mixer
   echo "done."
+  check-install
 }
 
 if [ "$1" = "-f" ]; then
