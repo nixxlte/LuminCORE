@@ -67,6 +67,12 @@ debian() {
       libsdl2-mixer-2.0-0
   echo "done."
   check-install
+  # Set up nala (debian exclusive)
+  echo "setting up nala..."
+  echo 'alias apt=nala' >> ~/.bashrc
+  source ~/.bashrc
+  nala update && nala upgrade -y
+  echo "done."
 }
 
 fedora() {
