@@ -18,6 +18,14 @@ new-usersetting() {
   echo "when you create a new user pls run 'sudo /home/NewUser.sh'"
 }
 
+# Set up Phantom
+phantom() {
+  echo "Setting up phantom"
+  cd ~/
+  git clone https://github.com/nixxlte/Phantom
+  cd Phantom
+}
+
 check-install() {
   echo "making sure everything is okay..."
   dotnet --list-sdks
@@ -73,6 +81,10 @@ debian() {
   source ~/.bashrc
   nala update && nala upgrade -y
   echo "done."
+  phantom
+  echo "done."
+  neofetch
+  echo "You're all set up! welcome to LuminOS!"
 }
 
 fedora() {
@@ -112,6 +124,10 @@ fedora() {
       libsdl2-mixer-2.0-0
   echo "done."
   check-install
+  phantom
+  echo "done."
+  neofetch
+  echo "You're all set up! welcome to LuminOS!"
 }
 
 arch() {
@@ -140,6 +156,10 @@ arch() {
   sudo pacman -S sdl2_image sdl2_ttf sdl2 sdl2_mixer
   echo "done."
   check-install
+  phantom
+  echo "done."
+  fastfetch
+  echo "You're all set up! welcome to LuminOS!"
 }
 
 if [ "$1" = "-f" ]; then
