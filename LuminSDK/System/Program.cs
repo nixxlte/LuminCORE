@@ -22,7 +22,7 @@ using System.Data.Common;
 // If i try to make my own kernel, the OS will not have any app stuff, and will be useless
 
 namespace Overlay {
-    // Code by NyanRay64 =3
+    // Code by imNyan.T64 -w-
     class Registry {
         public string Type { get; set; } = string.Empty;   // REG_SZ, REG_DWORD, etc.
         public string Name { get; set; } = string.Empty;   // <REG_TYPE Name="...">
@@ -322,6 +322,11 @@ namespace Overlay {
                 neofetch();
             } else if (argument[1] == "echo") {
                 echo(argument[2]);
+            } else if (argument[1] == "version") {
+                path = "Lumin/LuminSDK/InstalledVersion";
+                if (registries.ContainsKey(path)) {
+                    Console.WriteLine($"LuminSDK version: {registries[path].Value}\n");
+                }
             } else {
                 Console.WriteLine("Unknown startup argument: " + argument + " =|");
             }
