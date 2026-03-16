@@ -154,16 +154,9 @@ namespace Overlay {
                 bool attribute = element.HasAttributes;
                 string count = string.Empty;
 
-                //Console.Write(
-                //    $"{element.Name} {element.Value} : "
-                //);
-                //foreach (var attr in element.Attributes()) {
-                //    Console.WriteLine($"{attr.Name} : {attr.Value} ");
-                //}
-
                 if (!text && !attribute) {
                     Console.WriteLine($"{count}{element.Name}");
-                    count += " ‎";
+                    count += " ";
                     //continue;
                 } else if (text || attribute) {
                     Console.Write($"{element.Name} ");
@@ -266,8 +259,8 @@ namespace Overlay {
                     Console.WriteLine();
                     ASCII("OSlogo");
                     Console.WriteLine();
-                    Console.WriteLine("LuminSDK, Beta 3");
-                    Console.WriteLine("Code writen by NyanRay64\n");
+                    Console.WriteLine("LuminSDK, Beta 4");
+                    Console.WriteLine("Code writen by imNyan.T64 -w-\n");
                     string path = "Lumin/LuminSDK/InstalledVersion";
                     if (registries.ContainsKey(path)) {
                         Console.WriteLine($"Running in compilation: {registries[path].Value}");
