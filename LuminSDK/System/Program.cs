@@ -147,7 +147,7 @@ namespace Overlay {
 
         public static void regedit() { 
             Console.Clear();
-            Console.WriteLine("Registry Editor Beta 3\n For testing purposes only\n \n");
+            Console.WriteLine("Registry Editor Beta 4\n For testing purposes only\n \n");
             var doc = XDocument.Load("Registry.xml");
             foreach (var element in doc.Descendants()) {
                 bool text = !string.IsNullOrWhiteSpace(element.Value) && !element.HasElements;
