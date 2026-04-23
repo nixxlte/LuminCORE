@@ -377,3 +377,8 @@ namespace Overlay {
         }
     }
 }
+
+// at this point, ill probably re-do this code, adapted to everything new i learned in the past year, and better yet
+// adapted to the new Ubuntu 26.04 LTS
+// this means i REALLY have to optimise this, cause i want my system to keep its 4 gig minimum, 
+// despite canonical increased the minimum ram to 6gb ;-;
