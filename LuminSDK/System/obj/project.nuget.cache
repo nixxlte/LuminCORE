@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0JilQBkKEiY=",
+  "dgSpecHash": "diQLeq4CzBc=",
   "success": true,
-  "projectFilePath": "/home/nyanray_/Documents/GitHub/LuminCORE/LuminSDK/System/Overlay.csproj",
-  "expectedPackageFiles": [
-    "/home/nyanray_/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
-    "/home/nyanray_/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.22/microsoft.netcore.app.host.linux-x64.8.0.22.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\User\\Documents\\GitHub\\LuminCORE\\LuminSDK\\System\\Overlay.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

@@ -316,7 +316,7 @@ namespace Overlay {
             } else if (argument[1] == "echo") {
                 echo(argument[2]);
             } else if (argument[1] == "version") {
-                path = "Lumin/LuminSDK/InstalledVersion";
+                string path = "Lumin/LuminSDK/InstalledVersion";
                 if (registries.ContainsKey(path)) {
                     Console.WriteLine($"LuminSDK version: {registries[path].Value}\n");
                 }
