@@ -1,4 +1,11 @@
 <img width="100" height="100" alt="BRANDING" src="https://github.com/user-attachments/assets/73287fde-79a5-448e-a42c-9c34bb363e0b" /><br>
+# WE'RE MOVING
+today (may 20th 2026) i was trying to clone back my repos (i formated my main PC) and i saw the complete MESS that i did trying to organize everything in the LuminOS code.<br>
+thats why i decided to change to an org, with this change im changing the project name (yes, AGAIN, i promisse ill try to not change it again) and the SDK code will be moved [here](https://github.com/Pixel-linux/PixelSDK).<br>
+the project name will now be ["Pixel/Linux"](https://github.com/Pixel-linux), and all the LuminOS repos will be archived in a few days<br>
+ill also rewrite all the LuminSDK (or now PixelSDK) code, cause it is unoptimized, and it is a complete mess.<br>
+thats it! okay, bye, i shoudnt be writing rn.
+
 # LuminOS 
 an operating system based on Linux, optimized for C# and focused on privacy and design.  
 LuminOS is still in early development, so expect bugs and missing features.
